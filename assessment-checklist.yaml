@@ -1,0 +1,26 @@
+framework: ai-product-security-review
+version: "0.1"
+areas:
+  - id: identity
+    questions:
+      - "Are human, workload, model and tool identities explicitly defined?"
+      - "Are tool permissions scoped to least privilege?"
+  - id: data
+    questions:
+      - "Is sensitive data classified before use in prompts or retrieval?"
+      - "Are retrieval authorization controls enforced at query time?"
+  - id: prompt_input
+    questions:
+      - "Is untrusted content distinguished from trusted instructions?"
+      - "Are abuse cases for indirect prompt injection tested?"
+  - id: agents_tools
+    questions:
+      - "Are allowed tools and parameters constrained?"
+      - "Do consequential actions require deterministic policy checks or human approval?"
+  - id: supply_chain
+    questions:
+      - "Are model and dependency provenance/version changes recorded?"
+      - "Are external model/provider trust assumptions documented?"
+  - id: monitoring
+    questions:
+      - "Are security-relevant AI actions auditable without unnecessarily logging sensitive content?"
